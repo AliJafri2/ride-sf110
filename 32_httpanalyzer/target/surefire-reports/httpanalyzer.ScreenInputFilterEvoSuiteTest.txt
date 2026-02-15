@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: httpanalyzer.ScreenInputFilterEvoSuiteTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! - in httpanalyzer.ScreenInputFilterEvoSuiteTest
+test1(httpanalyzer.ScreenInputFilterEvoSuiteTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: expected:<88> but was:<226>
+	at httpanalyzer.ScreenInputFilterEvoSuiteTest.test1(ScreenInputFilterEvoSuiteTest.java:47)
+
