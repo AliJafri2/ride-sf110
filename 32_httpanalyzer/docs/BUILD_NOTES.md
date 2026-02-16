@@ -9,9 +9,9 @@
 - The project originally used Apache Ant as its build system.
 - Running `ant compile` worked successfully. The only warning was about `includeantruntime` not being set, which is harmless.
 - Running `ant test` completed successfully but ran zero tests because `src/test/java/` is empty - this project has no hand-written unit tests.
-- Running `ant compile-evosuite` failed because the EvoSuite runtime JAR was missing. The `build.xml` expected it at `../lib/evosuite.jar`, which is a directory outside the project that does not exist on this machine.
-- Running `ant evosuite-test` also failed for the same reason. Additionally, the target has two bugs in `build.xml`: it depends on the wrong compile target, and it searches the wrong directory for test files.
-- The EvoSuite tests in `evosuite-tests/` were never runnable with the original Ant build.
+- Running `ant compile-evosuite` initially failed because the EvoSuite runtime JAR was missing. The `build.xml` expected it at `../lib/evosuite.jar`. The `lib/` folder was later found in the original SF110 download and placed at `~/ride_research/lib/`.
+- Running `ant evosuite-test` had four bugs in the original `build.xml` that were all fixed: wrong compile dependency, wrong test directory, missing `evosuite.jar` on the runtime classpath, and missing headless JVM flag. See `PATCHLOG.md` for full details.
+- After fixing those bugs, `ant evosuite-test` runs successfully: 35 tests run, 34 passed, 1 known failure (same bad assertion as Maven).
 
 ---
 

@@ -159,25 +159,27 @@
 
 <!-- ====================================================================== -->
 
-  <target name="evosuite-test" depends="compile-tests"
+  <target name="evosuite-test" depends="compile-evosuite"
           description="Run EvoSuite generated tests">
      <junit printsummary="yes" haltonfailure="no" fork="yes"
           showoutput="yes">
+        <jvmarg value="-Djava.awt.headless=true"/>
         <formatter type="plain" usefile="false" />
         <classpath>
            <pathelement path="${build.classes}"/>
            <pathelement path="${build.evosuite}"/>
            <path refid="source.lib" />
            <path refid="test.lib" />
+           <path refid="evosuite.lib" />
         </classpath>
         <batchtest fork="yes">
-           <fileset dir="${test.java}">
+           <fileset dir="${evosuite.java}">
              <include name="**/*.java"/>
            </fileset>
         </batchtest>
      </junit>
-  </target> 
-  
+  </target>
+
   <!-- ====================================================================== -->
 
   <target name="jar" depends="compile"
