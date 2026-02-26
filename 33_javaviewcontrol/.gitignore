@@ -1,0 +1,9 @@
+# Ant build output
+build/
+# Maven build output
+target/
+# Windows Zone.Identifier files
+*:Zone.Identifier
+# EvoSuite generated reports and files
+evosuite-report/
+evosuite-files/
