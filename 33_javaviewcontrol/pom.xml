@@ -68,18 +68,6 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- EvoSuite 0.5.3 (full JAR) — installed from lib/evosuite.jar into local Maven repo
-             because evosuite-standalone-runtime:1.0.6 lacks the older APIs these tests use
-             (EvoSuiteRunner, Sandbox, Properties.SandboxMode).
-             Install command: mvn install:install-file -Dfile=lib/evosuite.jar
-               -DgroupId=org.evosuite -DartifactId=evosuite -Dversion=0.5.3 -Dpackaging=jar -->
-        <dependency>
-            <groupId>org.evosuite</groupId>
-            <artifactId>evosuite</artifactId>
-            <version>0.5.3</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
