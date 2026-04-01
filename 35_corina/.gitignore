@@ -1,5 +1,5 @@
 target/
 build/
-*.Zone.Identifier
+*:Zone.Identifier
 .DS_Store
 .RWL
